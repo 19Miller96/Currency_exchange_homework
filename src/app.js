@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
         el: "#app",
         data: {
             currencies: [],
-            selectedCurrency: null,
-            favouriteCurrencies: []
+            selectedCurrency: null
         },
+
         computed: {
             
         },
         mounted(){
-            this.getCurrency()
+            // unsure as to how to format the v-for
         },
         methods: {
             getCurrency: function(){
