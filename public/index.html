@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Title to go here</title>
+        <title>currency_exchange</title>
         <script src="./js/bundle.js"></script>
         <link rel="stylesheet" href="./css/style.css">
       </head>
@@ -10,7 +10,11 @@
 
             <div id="app">
 
-                
+                <label for="currency_select">Select a Currency:</label>
+                <select id="currency_select" v-model="selectedCurrency">
+                    <option disabled value="">Select a currency</option>
+                    <option v-for="currency in currencies" :value="country">{{currency.type}}</option>
+                </select>
 
 
             </div>

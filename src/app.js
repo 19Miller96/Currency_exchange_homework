@@ -11,13 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
         computed: {
             
         },
+        mounted(){
+            this.getCurrency()
+        },
         methods: {
             getCurrency: function(){
                 fetch("https://api.exchangeratesapi.io/latest")
                 .then(res => res.json())
                 .then(currency => this.currency = currency)
             },
-
+            addToFavourites: function(){
+                this.favouriteCurrencies.push(this.selectedCurrency)
+            },
         }
-
     })
+})
